@@ -4,9 +4,19 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth,windowHeight)
-  // put setup code here
+  noStroke();
+
 }
 
 function draw() {
-  // put drawing code here
+
+  background('yellow');
+
+
+  translate(width / 2, height / 2);
+  scale(frameCount * 2);
+  noFill();
+  stroke(lerpColor(color('black'), color('white'), frameCount/600))
+  ellipse(0, 0, 1, 1);
+
 }
